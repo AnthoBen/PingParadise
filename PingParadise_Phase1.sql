@@ -56,3 +56,25 @@ REFERENCES `T_CATEGORIE` (`CA_ID`);
 ALTER TABLE `T_PRODUIT`
 ADD FOREIGN KEY (`PR_MARQUE`)
 REFERENCES `T_MARQUE` (`MA_ID`);
+
+-- --------------------------------------------------------
+
+-- Ajout des catégories
+INSERT INTO `T_CATEGORIE` (`CA_ID`, `CA_NOM`) VALUES
+(NULL, 'Raquettes'),
+(NULL, 'Accessoires'),
+(NULL, 'Bois'),
+(NULL, 'Revêtements');
+
+-- --------------------------------------------------------
+
+-- Ajout des marques
+INSERT INTO `pingparadise`.`t_marque` (`MA_ID`, `MA_NOM`, `MA_DESCRIPTION`) VALUES
+(NULL, 'Yasaka', 'Yasaka fait parti des leaders mondiaux dans le domaine du tennis de table. Son produit phare le Mark V est le produit et le plus connu et a fortement contribué à la popularité de la marque.'),
+(NULL, 'Banco', 'Banco a débutée en tant que marque de distribution du site de vente en ligne Wacksport spécialisé dans le tennis de table. Elle est maintenant très répandue grâce à ses produits de qualité.'),
+(NULL, 'Tibhar', 'Tibhar fut fondée à Sarrebruck (Allemagne) en 1969 par l´entraîneur de renommée mondiale et ancien joueur de niveau international, Tibor Harangozo, qui donna son nom à l´entreprise : TIBor HARangozo. La marque, synonyme aujourd´hui dans le monde entier de matériel de tennis de table d´excellente qualité, garda son nom même après la mort de son fondateur en 1978.');
+
+-- --------------------------------------------------------
+
+-- Ajout des produits
+
