@@ -1,4 +1,3 @@
-
 -- Suppression des anciennes tables
 
 DROP TABLE IF EXISTS `T_PRODUIT`;
@@ -81,7 +80,7 @@ INSERT INTO `pingparadise`.`t_marque` (`MA_ID`, `MA_NOM`, `MA_DESCRIPTION`) VALU
 -- Raquette
 INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Tibhar Samsonov 2000', '01-003-0001', NULL, '13.90', '3', '1');
 -- Accessoire
-INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Housse Tibhar Twister', '02-003-001', 'Housse rectangulaire très robuste avec parois renforcées.', '9.90', '3', '2');
+INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Housse Tibhar Twister', '02-003-0001', 'Housse rectangulaire très robuste avec parois renforcées.', '9.90', '3', '2');
 -- Bois
 INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Bois Yasaka Balsa', '03-001-0001', 'Ce bois 7 plis exceptionnellement léger procure (grâce au balsa qui le compose) une incroyable sensation de maîtrise tout enrestant relativement rapide. ', '45.90', '1', '3');
 INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Banco Pro', '03-002-0001', 'Ce bois balsa très rapide conviendra particulièrement bien aux joueurs qui favorisent le top spin à mi-distance et près de la table. Les sensations de toucher de balle sont excellentes et sa légèreté vous permettra d''exécuter vos coups avec une grande vitesse. Dans le jeu contre l''initiative, vous conserverez une très bonne maîtrise de la balle et vous trouverez ainsi de très bons placements vous permettant de reprendre la direction de l''échange.', '33.90', '2', '3');
