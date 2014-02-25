@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS `T_PRODUIT` (
   `PR_REFERENCE` varchar(30) NOT NULL,
   `PR_DESCRIPTION` text,
   `PR_PRIX` decimal(10,2) NOT NULL,
-  `PR_MARQUE` int(11) NOT NULL,
-  `PR_CATEGORIE` int(11) NOT NULL,
+  `MA_ID` int(11) NOT NULL,
+  `CA_ID` int(11) NOT NULL,
   PRIMARY KEY (`PR_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `T_PRODUIT` (
 -- Clé étrangère T_PRODUIT -> T_CATEGORIE
 
 ALTER TABLE `T_PRODUIT`
-ADD FOREIGN KEY (`PR_CATEGORIE`)
+ADD FOREIGN KEY (`CA_ID`)
 REFERENCES `T_CATEGORIE` (`CA_ID`);
 
 -- --------------------------------------------------------
@@ -53,7 +53,7 @@ REFERENCES `T_CATEGORIE` (`CA_ID`);
 -- Clé étrangère T_PRODUIT -> T_MARQUE
 
 ALTER TABLE `T_PRODUIT`
-ADD FOREIGN KEY (`PR_MARQUE`)
+ADD FOREIGN KEY (`MA_ID`)
 REFERENCES `T_MARQUE` (`MA_ID`);
 
 -- --------------------------------------------------------
@@ -78,12 +78,12 @@ INSERT INTO `pingparadise`.`t_marque` (`MA_ID`, `MA_NOM`, `MA_DESCRIPTION`) VALU
 -- Ajout des produits
 
 -- Raquette
-INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Tibhar Samsonov 2000', '01-003-0001', NULL, '13.90', '3', '1');
+INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `MA_ID`, `CA_ID`) VALUES (NULL, 'Tibhar Samsonov 2000', '01-003-0001', NULL, '13.90', '3', '1');
 -- Accessoire
-INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Housse Tibhar Twister', '02-003-0001', 'Housse rectangulaire très robuste avec parois renforcées.', '9.90', '3', '2');
+INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `MA_ID`, `CA_ID`) VALUES (NULL, 'Housse Tibhar Twister', '02-003-0001', 'Housse rectangulaire très robuste avec parois renforcées.', '9.90', '3', '2');
 -- Bois
-INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Bois Yasaka Balsa', '03-001-0001', 'Ce bois 7 plis exceptionnellement léger procure (grâce au balsa qui le compose) une incroyable sensation de maîtrise tout enrestant relativement rapide. ', '45.90', '1', '3');
-INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Banco Pro', '03-002-0001', 'Ce bois balsa très rapide conviendra particulièrement bien aux joueurs qui favorisent le top spin à mi-distance et près de la table. Les sensations de toucher de balle sont excellentes et sa légèreté vous permettra d''exécuter vos coups avec une grande vitesse. Dans le jeu contre l''initiative, vous conserverez une très bonne maîtrise de la balle et vous trouverez ainsi de très bons placements vous permettant de reprendre la direction de l''échange.', '33.90', '2', '3');
+INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `MA_ID`, `CA_ID`) VALUES (NULL, 'Bois Yasaka Balsa', '03-001-0001', 'Ce bois 7 plis exceptionnellement léger procure (grâce au balsa qui le compose) une incroyable sensation de maîtrise tout enrestant relativement rapide. ', '45.90', '1', '3');
+INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `MA_ID`, `CA_ID`) VALUES (NULL, 'Banco Pro', '03-002-0001', 'Ce bois balsa très rapide conviendra particulièrement bien aux joueurs qui favorisent le top spin à mi-distance et près de la table. Les sensations de toucher de balle sont excellentes et sa légèreté vous permettra d''exécuter vos coups avec une grande vitesse. Dans le jeu contre l''initiative, vous conserverez une très bonne maîtrise de la balle et vous trouverez ainsi de très bons placements vous permettant de reprendre la direction de l''échange.', '33.90', '2', '3');
 -- Revêtements
-INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Rev. Feeling', '04-002-0001', 'Doté d''une rapidité raisonnable et d''une bonne adhérence, ce revêtement Allround permet d''aborder et de perfectionner efficacement tous les coups de tennis de table. L''extraordinaire contrôle de balle qui le caractérise assure aux jeunes joueurs (et aux moins jeunes !) un sentiment de sécurité absolue tout en permettant de bonnes accélérations et la production d''effets variés. Le joueur polyvalent y trouvera aussi son compte ! Le rapport qualité/prix est tout simplement incroyable !', '29.90', '2', '4');
-INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `PR_MARQUE`, `PR_CATEGORIE`) VALUES (NULL, 'Rev. Allstar', '04-002-0002', 'Doté d''une rapidité raisonnable et d''une bonne adhérence, ce revêtement Allround permet d''aborder et de perfectionner efficacement tous les coups de Tennis de Table. L''extraordinaire contrôle de balle qui le caractérise assure aux jeunes joueurs (et aux moins jeunes !) un sentiment de sécurité absolue tout en permettant de bonnes accélérations et la production d''effets variés. Le joueur polyvalent y trouvera aussi son compte ! Le rapport qualité/prix est tout simplement incroyable ! ', '17.90', '2', '4');
+INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `MA_ID`, `CA_ID`) VALUES (NULL, 'Rev. Feeling', '04-002-0001', 'Doté d''une rapidité raisonnable et d''une bonne adhérence, ce revêtement Allround permet d''aborder et de perfectionner efficacement tous les coups de tennis de table. L''extraordinaire contrôle de balle qui le caractérise assure aux jeunes joueurs (et aux moins jeunes !) un sentiment de sécurité absolue tout en permettant de bonnes accélérations et la production d''effets variés. Le joueur polyvalent y trouvera aussi son compte ! Le rapport qualité/prix est tout simplement incroyable !', '29.90', '2', '4');
+INSERT INTO `t_produit` (`PR_ID`, `PR_NOM`, `PR_REFERENCE`, `PR_DESCRIPTION`, `PR_PRIX`, `MA_ID`, `CA_ID`) VALUES (NULL, 'Rev. Allstar', '04-002-0002', 'Doté d''une rapidité raisonnable et d''une bonne adhérence, ce revêtement Allround permet d''aborder et de perfectionner efficacement tous les coups de Tennis de Table. L''extraordinaire contrôle de balle qui le caractérise assure aux jeunes joueurs (et aux moins jeunes !) un sentiment de sécurité absolue tout en permettant de bonnes accélérations et la production d''effets variés. Le joueur polyvalent y trouvera aussi son compte ! Le rapport qualité/prix est tout simplement incroyable ! ', '17.90', '2', '4');
