@@ -1,0 +1,45 @@
+body {
+  padding-top: 50px;
+}
+
+.home {
+  margin-bottom: 20px;
+}
+
+.home h2 {
+  margin-top: 10px;
+}
+
+.thumbnail {
+  margin-bottom: 10px;
+}
+
+.ratings {
+  padding: 10px;
+}
+
+header .intro {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #377ac4;
+  background-image: -webkit-linear-gradient(top,#28598f 0,#377ac4 100%);
+  background-image: linear-gradient(to bottom,#28598f 0,#377ac4 100%);
+  background-repeat: repeat-x;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+header .breadcrumb {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: solid 1px #ddd;
+}
